@@ -36,8 +36,8 @@ function Admin() {
         const tl = gsap.timeline();
         // Animation configuration for each bar-body
         const animations = [
-        { target: '.acc', duration: 3.5, delay: 0.5, height: `${accountsCount * 20}px` },
-        { target: '.ord', duration: 3.5, delay: 1, height: `${appointmentCount * 20}px` },
+            { target: '.acc', duration: 3.5, delay: 0.5, height: `${accountsCount * 20}px` },
+            { target: '.ord', duration: 3.5, delay: 1, height: `${appointmentCount * 20}px` },
         ];
 
         // Animate each bar-body
@@ -45,15 +45,15 @@ function Admin() {
         tl.fromTo(
             animation.target,
             {
-            height: '0px',
-            scaleY: 0,
+                height: '0px',
+                scaleY: 0,
             },
             {
             scaleY: 1,
-            ease: 'sin.inOut',
-            duration: animation.duration,
-            delay: animation.delay,
-            height: animation.height,
+                ease: 'sin.inOut',
+                duration: animation.duration,
+                delay: animation.delay,
+                height: animation.height,
             },
             0
         );
@@ -93,8 +93,8 @@ function Admin() {
                         <div className="data">
                             <div className="field-data">
                                 <h5> Appointments </h5>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88333 18.6867 3.825 17.9743 2.925 17.075C2.025 16.175 1.31267 15.1167 0.788 13.9C0.263333 12.6833 0.000666667 11.3833 0 10C0 8.61667 0.262667 7.31667 0.788 6.1C1.31333 4.88333 2.02567 3.825 2.925 2.925C3.825 2.025 4.88333 1.31267 6.1 0.788C7.31667 0.263333 8.61667 0.000666667 10 0C11.3833 0 12.6833 0.262667 13.9 0.788C15.1167 1.31333 16.175 2.02567 17.075 2.925C17.975 3.825 18.6877 4.88333 19.213 6.1C19.7383 7.31667 20.0007 8.61667 20 10C20 11.3833 19.7373 12.6833 19.212 13.9C18.6867 15.1167 17.9743 16.175 17.075 17.075C16.175 17.975 15.1167 18.6877 13.9 19.213C12.6833 19.7383 11.3833 20.0007 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18ZM6 13V11.35C6 11.2167 6.025 11.0873 6.075 10.962C6.125 10.8367 6.2 10.7243 6.3 10.625L11.525 5.425C11.675 5.275 11.8417 5.16667 12.025 5.1C12.2083 5.03333 12.3917 5 12.575 5C12.775 5 12.9667 5.03767 13.15 5.113C13.3333 5.18833 13.5 5.30067 13.65 5.45L14.575 6.375C14.7083 6.525 14.8127 6.69167 14.888 6.875C14.9633 7.05833 15.0007 7.24167 15 7.425C15 7.60833 14.9667 7.796 14.9 7.988C14.8333 8.18 14.725 8.35067 14.575 8.5L9.375 13.7C9.275 13.8 9.16233 13.875 9.037 13.925C8.91167 13.975 8.78267 14 8.65 14H7C6.71667 14 6.479 13.904 6.287 13.712C6.095 13.52 5.99933 13.2827 6 13ZM12.575 8.4L13.5 7.425L12.575 6.5L11.625 7.45L12.575 8.4Z" fill="#fff"/>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M5.33301 3.66667V0H6.33301V3.66667H18.6663V0H19.6663V3.66667H22.4997C23.0743 3.66667 23.6254 3.89494 24.0317 4.30127C24.4381 4.7076 24.6663 5.2587 24.6663 5.83333V22.5C24.6663 23.0746 24.4381 23.6257 24.0317 24.0321C23.6254 24.4384 23.0743 24.6667 22.4997 24.6667H2.49967C1.92504 24.6667 1.37394 24.4384 0.96761 24.0321C0.561281 23.6257 0.333008 23.0746 0.333008 22.5V5.83333C0.333008 5.2587 0.561281 4.7076 0.96761 4.30127C1.37394 3.89494 1.92504 3.66667 2.49967 3.66667H5.33301ZM5.33301 4.66667H2.49967C2.19026 4.66667 1.89351 4.78958 1.67472 5.00838C1.45592 5.22717 1.33301 5.52391 1.33301 5.83333V22.5C1.33301 22.8094 1.45592 23.1062 1.67472 23.325C1.89351 23.5437 2.19026 23.6667 2.49967 23.6667H22.4997C22.8091 23.6667 23.1058 23.5437 23.3246 23.325C23.5434 23.1062 23.6663 22.8094 23.6663 22.5V5.83333C23.6663 5.52391 23.5434 5.22717 23.3246 5.00838C23.1058 4.78958 22.8091 4.66667 22.4997 4.66667H19.6663V8.33333H18.6663V4.66667H6.33301V8.33333H5.33301V4.66667ZM9.99967 13H4.99967V12H9.99967V13ZM14.9997 12H19.9997V13H14.9997V12ZM9.99967 18H4.99967V17H9.99967V18ZM19.9997 18H14.9997V17H19.9997V18Z" fill="white"/>
                                 </svg>
                                 <h5 id="reservations-count">{appointmentCount}</h5>
                             </div>
@@ -102,15 +102,15 @@ function Admin() {
                         </div>
                     </div>
                     <div className="daily-orders">
-                        <h5> Statistics </h5>
+                        <h5> Daily Reports </h5>
                         <div className="bar-chart">
                             <div className="bar-body-chart">
                                 <div className="bar-body acc">
-                                    <div className="text"> Accounts </div>
+                                    <div className="text"> Accounts <div className="dash"></div> {accountsCount}  </div>
                                     <div className="box"></div>
                                 </div>
                                 <div className="bar-body ord">
-                                    <div className="text"> Appointments </div>
+                                    <div className="text"> Appointments <div className="dash"></div> {appointmentCount} </div>
                                     <div className="box ord"></div>
                                 </div>
                             </div>
@@ -118,18 +118,17 @@ function Admin() {
                                 <div className="line">
                                     <h5> 10000 </h5>
                                     <div className="under_line"></div>
+                                    <h5> 9999 </h5>
                                 </div>
                                 <div className="line">
                                     <h5> 5000 </h5>
                                     <div className="under_line"></div>
-                                </div>
-                                <div className="line">
-                                    <h5> 2500 </h5>
-                                    <div className="under_line"></div>
+                                    <h5> 4999 </h5>
                                 </div>
                                 <div className="line">
                                     <h5> 100 </h5>
                                     <div className="under_line"></div>
+                                    <h5> 99 </h5>
                                 </div>
                             </div>
                         </div>

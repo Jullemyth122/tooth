@@ -13,15 +13,6 @@ function Appointment() {
     const [updatedAppointmentTime, setUpdatedAppointmentTime] = useState('');
     const [updatedServices, setUpdatedServices] = useState('');
 
-    const serviceMapping = {
-        1: 'Pet Boarding',
-        2: 'Pet Feeding',
-        3: 'Pet Grooming',
-        4: 'Pet Training',
-        5: 'Pet Exercise',
-        6: 'Pet Treatment',
-    };
-
     useEffect(() => {
         // Fetch appointment data and populate the table
         fetch('http://localhost:5000/api/appointments/')
@@ -133,7 +124,7 @@ function Appointment() {
                 <div className="account-subcomponent">
                     {editingAppointment && (
                         <div className="edit-form">
-                            <h2>Edit Appointment {editingAppointment.id} </h2>
+                            <h2>Edit Appointment </h2>
                             <label htmlFor="edit-fullName">Full Name:</label>
                             <input
                                 type="text"
@@ -227,7 +218,7 @@ function Appointment() {
                                             <td>{appointment.Doctor}</td>
                                             <td>{appointment.AppointmentDate}</td>
                                             <td>{appointment.AppointmentTime}</td>
-                                            <td>{serviceMapping[appointment.Services]}</td>
+                                            <td>{appointment.Services}</td>
                                             <td>
                                                 {editingAppointment === appointment ? (
                                                     <div className='button-option'>
