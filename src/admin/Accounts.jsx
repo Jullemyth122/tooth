@@ -71,7 +71,7 @@ function Accounts() {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
+            console.log(data);
             if (data.status === 200) {
                 // Data updated successfully
             } else {
@@ -83,7 +83,6 @@ function Accounts() {
         });
 
         setEditingAccount(null);
-
     };
 
     const handleCancelEdit = () => {
@@ -91,14 +90,18 @@ function Accounts() {
     };
 
     const handleSearch = (e) => {
-        setSearchText(e.target.value.toLowerCase());
+        const searchText = e.target.value.toLowerCase();
+
+        setSearchText(searchText);
 
         // Filter accounts based on search text
         setFilteredAccounts(
             accounts.filter((account) => {
                 const accountName = `${account.UserFName} ${account.UserLName}`.toLowerCase();
                 const accountEmail = account.UserEmail.toLowerCase();
-                return accountName.includes(searchText) || accountEmail.includes(searchText);
+
+                // Include the account if the search text is empty or if it matches the name or email
+                return searchText === '' || accountName.includes(searchText) || accountEmail.includes(searchText);
             })
         );
     };
